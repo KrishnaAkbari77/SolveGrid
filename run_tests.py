@@ -1,4 +1,3 @@
-"""Dependency-light test runner for environments without pytest."""
 
 from __future__ import annotations
 

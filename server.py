@@ -1,9 +1,3 @@
-"""Small standard-library web server for the HTML/CSS frontend.
-
-Run this file, then open http://127.0.0.1:8000 in a browser.
-The UI stays in frontend/, while puzzle logic stays in the Python modules.
-"""
-
 from __future__ import annotations
 
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -155,7 +149,7 @@ class SolverHandler(SimpleHTTPRequestHandler):
         self._send_json({"ok": True})
 
 
-def run(host: str = "127.0.0.1", port: int = 8091) -> None:
+def run(host: str = "127.0.0.1", port: int = 8080) -> None:
     server = ThreadingHTTPServer((host, port), SolverHandler)
     print(f"Open http://{host}:{port}")
     server.serve_forever()

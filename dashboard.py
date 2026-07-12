@@ -1,5 +1,3 @@
-"""Generate solve-history charts with pandas and matplotlib."""
-
 from __future__ import annotations
 
 from pathlib import Path

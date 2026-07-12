@@ -1,5 +1,3 @@
-"""Sudoku solving and image/manual-entry helpers."""
-
 from __future__ import annotations
 
 import time

@@ -1,5 +1,3 @@
-"""Shared image-processing pipeline for grid-based puzzles."""
-
 from __future__ import annotations
 
 from typing import Iterable
