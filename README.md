@@ -80,8 +80,4 @@ Go to `http://127.0.0.1:8091` in your browser.
 python run_tests.py
 ```
 
-## Notes for viva / defense
 
-- The backtracking solver is original — implemented from scratch, not a library call.
-- The image pipeline (grid detection → perspective correction → OCR cleanup) is the most defensible technical component; be ready to explain how connected-component analysis filters out grid-line noise before OCR.
-- Tesseract is a third-party OCR engine — same as any library dependency (e.g., NumPy). The value-add is the pipeline that gets a clean image *to* Tesseract, not the OCR algorithm itself.
