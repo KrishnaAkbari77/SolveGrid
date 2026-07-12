@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SolveGrid</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar">
+        <div>
+          <h1>Solve Sudoku</h1>
+        </div>
+          <button class="tab is-active" data-view="sudoku" type="button">Sudoku</button>
+          <button class="tab" data-view="dashboard" type="button">Dashboard</button>
+      </section>
+
+      <section id="sudoku" class="view is-active">
+        <div class="workspace two-col">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>SolveGrid</h2>
+              <div class="actions">
+                <input type="file" id="sudokuImageUpload" accept="image/*" style="display: none;">
+                <button id="uploadSudokuBtn" type="button">Upload Image</button>
+                <button id="loadSample" type="button">Sample</button>
+                <button id="clearSudoku" type="button">Clear</button>
+              </div>
+            </div>
+            <div id="sudokuGrid" class="sudoku-grid" aria-label="Sudoku input grid"></div>
+            <div class="actions bottom-actions">
+              <button id="solveSudoku" class="primary" type="button">Solve Sudoku</button>
+            </div>
+          </div>
+
+          <div class="panel result-panel">
+            <h2>Result</h2>
+            <p id="sudokuStatus" class="status">Enter digits from 1 to 9. Leave blanks empty.</p>
+            <div class="mini-board" id="sudokuPreview"></div>
+            <img id="sudokuFlattenedImage" style="max-width: 100%; margin-top: 1rem; border-radius: 8px; display: none;" alt="Processed Sudoku Image" />
+          </div>
+        </div>
+      </section>
+
+
+      <section id="dashboard" class="view">
+        <div class="workspace">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Dashboard</h2>
+              <div class="actions">
+                <button id="clearHistory" type="button">Clear History</button>
+              </div>
+            </div>
+            <div class="charts">
+              <canvas id="timeChart" width="520" height="260"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
